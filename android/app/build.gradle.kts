@@ -42,6 +42,15 @@ android {
 
 dependencies {
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
+
+    // home_widget 0.9.0 uses floating Glance and WorkManager versions. Keep
+    // builds reproducible and compatible with the plugin's JVM 8 target.
+    implementation("androidx.glance:glance-appwidget") {
+        version { strictly("1.0.0") }
+    }
+    implementation("androidx.work:work-runtime-ktx") {
+        version { strictly("2.9.1") }
+    }
 }
 
 flutter {

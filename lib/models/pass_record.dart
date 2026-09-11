@@ -39,6 +39,24 @@ class PassRecord {
     required this.createdAt,
   });
 
+  /// Date used to decide when this pass should move to the archive.
+  ///
+  /// A date without a time remains active until the end of that local day.
+  DateTime? get archiveDate {
+    for (final rawDate in [eventDate, expirationDate]) {
+      if (rawDate == null || rawDate.isEmpty) continue;
+      final date = DateTime.tryParse(rawDate);
+      if (date == null) continue;
+
+      final isDateOnly = RegExp(r'^\d{4}-\d{2}-\d{2}$').hasMatch(rawDate);
+      return isDateOnly ? date.add(const Duration(days: 1)) : date;
+    }
+    return null;
+  }
+
+  /// The pass is archived automatically once its archive date has passed.
+  bool isArchivedAt(DateTime now) => archiveDate?.isAfter(now) == false;
+
   Map<String, dynamic> toMap() => {
         'id': id,
         'serial_number': serialNumber,

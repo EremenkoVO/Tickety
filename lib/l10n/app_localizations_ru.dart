@@ -31,6 +31,16 @@ class AppLocalizationsRu extends AppLocalizations {
   String get homeError => 'Ошибка';
 
   @override
+  String get archiveTitle => 'Архив';
+
+  @override
+  String get archiveEmptyTitle => 'Архив пуст';
+
+  @override
+  String get archiveEmptyHint =>
+      'Прошедшие билеты появятся здесь автоматически';
+
+  @override
   String get passTicket => 'Билет';
 
   @override

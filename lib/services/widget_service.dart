@@ -28,8 +28,8 @@ class WidgetService {
     DateTime? nearestDate;
 
     for (final p in passes) {
-      final date = DateTime.tryParse(p.eventDate ?? '');
-      if (date == null || date.isBefore(now)) continue;
+      final date = p.archiveDate;
+      if (p.eventDate == null || date == null || p.isArchivedAt(now)) continue;
       if (nearestDate == null || date.isBefore(nearestDate)) {
         nearest = p;
         nearestDate = date;

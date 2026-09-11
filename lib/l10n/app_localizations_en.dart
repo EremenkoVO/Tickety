@@ -31,6 +31,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get homeError => 'Error';
 
   @override
+  String get archiveTitle => 'Archive';
+
+  @override
+  String get archiveEmptyTitle => 'Archive is empty';
+
+  @override
+  String get archiveEmptyHint => 'Past tickets will appear here automatically';
+
+  @override
   String get passTicket => 'Ticket';
 
   @override

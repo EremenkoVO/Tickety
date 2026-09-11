@@ -19,6 +19,15 @@ subprojects {
     project.evaluationDependsOn(":app")
 }
 
+project(":home_widget") {
+    configurations.configureEach {
+        resolutionStrategy.force(
+            "androidx.glance:glance-appwidget:1.0.0",
+            "androidx.work:work-runtime-ktx:2.9.1",
+        )
+    }
+}
+
 tasks.register<Delete>("clean") {
     delete(rootProject.layout.buildDirectory)
 }

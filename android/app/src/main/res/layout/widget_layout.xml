@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:textSize="14sp"
             android:textStyle="bold"
-            android:textColor="#FF000000"
+            android:textColor="@color/widget_text"
             android:maxLines="2"
             android:ellipsize="end" />
 
@@ -43,14 +43,14 @@
                 android:layout_height="wrap_content"
                 android:text="&#128197; "
                 android:textSize="11sp"
-                android:textColor="#FF666666" />
+                android:textColor="@color/widget_text_secondary" />
 
             <TextView
                 android:id="@+id/widget_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="11sp"
-                android:textColor="#FF666666"
+                android:textColor="@color/widget_text_secondary"
                 android:maxLines="1"
                 android:ellipsize="end" />
         </LinearLayout>
@@ -66,14 +66,14 @@
                 android:layout_height="wrap_content"
                 android:text="&#128205; "
                 android:textSize="11sp"
-                android:textColor="#FF666666" />
+                android:textColor="@color/widget_text_secondary" />
 
             <TextView
                 android:id="@+id/widget_venue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="11sp"
-                android:textColor="#FF666666"
+                android:textColor="@color/widget_text_secondary"
                 android:maxLines="1"
                 android:ellipsize="end" />
         </LinearLayout>
@@ -101,7 +101,7 @@
             android:layout_height="wrap_content"
             android:text="@string/widget_no_event"
             android:textSize="12sp"
-            android:textColor="#FF666666"
+            android:textColor="@color/widget_text_secondary"
             android:layout_marginTop="8dp" />
 
     </LinearLayout>

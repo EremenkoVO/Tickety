@@ -140,6 +140,24 @@ abstract class AppLocalizations {
   /// **'Error'**
   String get homeError;
 
+  /// No description provided for @archiveTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Archive'**
+  String get archiveTitle;
+
+  /// No description provided for @archiveEmptyTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Archive is empty'**
+  String get archiveEmptyTitle;
+
+  /// No description provided for @archiveEmptyHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Past tickets will appear here automatically'**
+  String get archiveEmptyHint;
+
   /// No description provided for @passTicket.
   ///
   /// In en, this message translates to:
